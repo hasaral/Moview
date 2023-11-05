@@ -52,6 +52,7 @@ final class NetworkManager {
         provider.requestData(target: .getCollection(pages: pages, search: "Comedy"), responseModel: SearchMovieModel.self) { response  in
             switch response {
             case .success(let res):
+                LoadingView.stopLoading()
                 completed(res)
             case .failure(let err):
                 print(err)

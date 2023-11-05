@@ -23,6 +23,7 @@ open class LoadingView {
             spinnerView = UIActivityIndicatorView(frame: frame)
             spinnerView!.backgroundColor = backgroundColor
             spinnerView!.style = style
+            spinnerView?.color = .blue
             window.addSubview(spinnerView!)
             spinnerView!.startAnimating()
         }
